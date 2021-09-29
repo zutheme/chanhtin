@@ -1,0 +1,21 @@
+﻿@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/librebaskerville/v9/kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcaxY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/librebaskerville/v9/kmKnZrc3Hgbbcjq75U4uslyuy4kn0pNe.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(s/librebaskerville/v9/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTjYw.ttf) format('truetype');
+}
