@@ -16,5 +16,4 @@ get_header(); ?>
     $prfx_stored_meta = get_post_meta( $idpost );  ?>
 <!--Page Title-->
 
-   
 <?php get_footer(); ?>
