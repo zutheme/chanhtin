@@ -603,6 +603,34 @@ if( function_exists('acf_add_local_field_group') ) {
 				),
 			),
 			/*end doc*/
+			/*about*/
+			array (
+				'key'   		=> 'tab_aboutus',
+				'label' 		=> __( 'aboutus', 'htz' ),
+				'name'  		=> 'tab_aboutus',
+				'type'  		=> 'tab',
+				'placement' 	=> 'left',
+			),
+			array (
+				'key'   		=> 'aboutus_vie',
+				'label' 		=> __( 'about us vie', 'htz' ),
+				'name'  		=> 'aboutus_vie',
+				'type'  		=> 'textarea',
+			),
+
+			array (
+				'key'   		=> 'aboutus_en',
+				'label' 		=> __( 'about us en', 'htz' ),
+				'name'  		=> 'aboutus_en',
+				'type'  		=> 'textarea',
+			),
+			array (
+				'key'   		=> 'aboutus_arab',
+				'label' 		=> __( 'about us arab', 'htz' ),
+				'name'  		=> 'aboutus_arab',
+				'type'  		=> 'textarea',
+			),
+			/*end aboutus*/
 		/*===============================================*/
 		),
 		'location' => array (

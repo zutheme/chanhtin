@@ -35,7 +35,7 @@
     <link href="<?php bloginfo('template_directory');?>/justica/css/owl.transitions.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/magnific-popup.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/jquery.countdown.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_directory');?>/justica/css/style.css?v=0.2.3" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory');?>/justica/css/style.css?v=0.3.5" rel="stylesheet" type="text/css">
     <!-- color scheme -->
     <link id="colors" href="<?php bloginfo('template_directory');?>/justica/css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/coloring-logo.css?v=0.0.1" rel="stylesheet" type="text/css">

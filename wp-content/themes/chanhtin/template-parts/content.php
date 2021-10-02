@@ -19,24 +19,32 @@
 <?php
 	if ( is_singular() ) : 
 			//the_title( '<h1>', '</h1>' ); ?>
-			<div class="inner-box">
-			<?php the_content(); ?>
-			</div>
+       <div class="post-text">
+        <?php the_content(); ?>                  
+       <!--<span class="post-date">April 1, 2018</span>
+        <span class="post-comment">1</span>
+        <span class="post-like">181</span>-->
+       </div>
 	<?php else : ?>
-	<div class="news-block-three">
-        <div class="inner-box">
-            <div class="image-box">
-                <figure class="image"><a href="<?php the_permalink(); ?>"><img src="<?php echo $url_default; ?>" alt=""></a></figure>
-                <!--<span class="category">business</span>-->
-            </div>
-            <div class="lower-content">
-                
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <p><?php echo $excerpt; ?></p>
-                <div class="link"><a href="<?php the_permalink(); ?>"><i class="fas fa-arrow-right"></i><span><?php pll_e('readmore'); ?></span></a></div>
-            </div>
-        </div>
-    </div>
+  <div class="col-lg-4 col-md-6 mb30">
+      <div class="bloglist item">
+          <div class="post-content">
+              <!--<div class="date-box">
+                  <div class="m">10</div>
+                  <div class="d">NOV</div>
+              </div>-->
+              <div class="post-image">
+                  <img alt="" src="<?php echo $url_default; ?>">
+              </div>
+              <div class="post-text">
+                  <!--<span class="p-tagline">Law Firm</span>-->
+                  <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?><span></span></a></h4>
+                  <p><?php echo get_the_excerpt_max(200); ?></p>
+                  <!--<span class="p-author">Fynley Wilkinson</span>-->
+              </div>
+          </div>
+      </div>
+  </div>
 	<?php endif;
 
 		

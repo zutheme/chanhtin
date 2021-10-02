@@ -2,7 +2,8 @@
 pll_register_string('category', 'category', 'category', true);
 pll_register_string('category', 'infomation', 'category', true);
 pll_register_string('category', 'service', 'category', true);
-pll_register_string('category', 'recentnews', 'category', true);
+pll_register_string('category', 'categories', 'category', true);
+//pll_register_string('category', 'recentnews', 'category', true);
 pll_register_string('category', 'imagegallery', 'category', true);
 pll_register_string('category', 'populartags', 'category', true);
 pll_register_string('post', 'nothingmatched', 'post', true);
@@ -17,6 +18,10 @@ pll_register_string('post', 'support', 'post', true);
 pll_register_string('post', 'taxcode', 'post', true);
 pll_register_string('post', 'description', 'post', true);
 pll_register_string('post', 'client', 'post', true);
+pll_register_string('post', 'recentnews', 'post', true);
+pll_register_string('post', 'aboutus', 'post', true);
+pll_register_string('post', 'contactus', 'post', true);
+
 pll_register_string('post', 'document', 'post', true);
 pll_register_string('account', 'member', 'account', true);
 pll_register_string('account', 'login', 'account', true);

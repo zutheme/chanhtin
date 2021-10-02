@@ -50,79 +50,61 @@ get_header();
 			}
 		}
  ?>
-<!--Page Title-->
- <section class="page-title style-three centred <?php echo $slug_banner; ?>" style="background-image: url(<?php echo $banner_detail; ?>);">
-    <div class="auto-container">
-        <div class="content-box clearfix">
-            <?php the_archive_title( '<h1>', '</h1>' );
-			//the_archive_description( '<div class="archive-description">', '</div>' );?>
-			<?php
-				if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb( '<p id="breadcrumbs" class="bread-crumb clearfix">','</p>' );
-				}
-				?>
+ <section id="subheader" class="text-white" data-stellar-background-ratio=".2" data-bgimage="url(<?php echo $banner_detail; ?>) top">
+    <div class="center-y relative text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                   <?php the_archive_title( '<h1>', '</h1>' );
+					//the_archive_description( '<div class="archive-description">', '</div>' );?>
+                </div>
+                <div class="col-md-12 text-center">
+                <?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs" class="bread-crumb clearfix">','</p>' ); } ?>
+				</div>
+                <div class="clearfix"></div>
+            </div>
         </div>
     </div>
 </section>
-<!-- news-section -->
-      <!-- sidebar-page-container -->
-    <section class="sidebar-page-container">
-        <div class="auto-container">
-            <div class="row clearfix">
-                <div class="col-lg-9 col-md-12 col-sm-12 content-side">
-                    <div class="blog-classic-content">
-					<?php if ( have_posts() ) : ?>
+<section aria-label="section">
+     <div class="container">
+          <div class="row">
+			<?php if ( have_posts() ) : 
+				$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1; 
+				/* Start the Loop */
+				while ( have_posts() ) :
+					the_post();
+					/*
+					 * Include the Post-Type-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+					 */
+					get_template_part( 'template-parts/content', get_post_type() );
 
-						<?php
-						$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1; 
-						/* Start the Loop */
-						while ( have_posts() ) :
-							the_post();
+				endwhile;
+				//the_posts_navigation(); 
+				if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
+					<div class="pagination-wrapper centred">
+						<?php custom_pagination($wp_query->max_num_pages,"",$paged); ?>
+	                    <!--<ul class="pagination clearfix">
+	                        <li><a href="blog-classic.html" class="active">1</a></li>
+	                        <li><a href="blog-classic.html">2</a></li>
+	                        <li><a href="blog-classic.html">3</a></li>
+	                        <li><a href="blog-classic.html"><i class="fas fa-arrow-right"></i></a></li>
+	                    </ul>-->
+	                </div>   
+           		<?php endif;
+				?>
+				<?php else :
 
-							/*
-							 * Include the Post-Type-specific template for the content.
-							 * If you want to override this in a child theme, then include a file
-							 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-							 */
-							get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content', 'none' );
 
-						endwhile;
-
-						//the_posts_navigation(); 
-						if ( $wp_query->max_num_pages > 1 ) : // if there's more than one page turn on pagination ?>
-							<div class="pagination-wrapper centred">
-								<?php custom_pagination($wp_query->max_num_pages,"",$paged); ?>
-			                    <!--<ul class="pagination clearfix">
-			                        <li><a href="blog-classic.html" class="active">1</a></li>
-			                        <li><a href="blog-classic.html">2</a></li>
-			                        <li><a href="blog-classic.html">3</a></li>
-			                        <li><a href="blog-classic.html"><i class="fas fa-arrow-right"></i></a></li>
-			                    </ul>-->
-			                </div>   
-                   		<?php endif;
-						?>
-						<?php else :
-
-							get_template_part( 'template-parts/content', 'none' );
-
-						endif;
-						?>
-					</div>
-				</div>
-                <div class="col-lg-3 col-md-12 col-sm-12 sidebar-side">
-                    <div class="sidebar">
-                    	<?php 
-							if($slug_banner == 'dich-vu'){
-								get_template_part('layout/detail-service');
-							}else{
-								get_template_part('layout/detail-sidebar');
-							}
-						 ?>  
-                    </div>
-                </div>
-            </div>
+				endif; ?>
         </div>
-    </section>
+    </div>
+ </section>
 
 <?php
 

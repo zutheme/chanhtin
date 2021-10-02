@@ -6398,7 +6398,11 @@ a.btn-right {
 .text-light .de_testi.opt-2 blockquote img.client{
 	width:100px;
 	height:auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
+
 
 .de_testi.opt-2 blockquote p {
     font-family: "Libre Franklin";
@@ -8835,10 +8839,39 @@ margin:5px;
     border-bottom: solid 1px #f2f2f2;
     padding-bottom: 8px;
     margin-bottom: 8px;
+    min-height: 60px;
 }
 
 .widget-post li a {
     padding-left: 60px;
+    display: block;
+    text-decoration: none;
+    color: #111111;
+}
+
+.widget-post li {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    min-height: 60px;
+}
+
+.widget-post li a {
+    padding-left: 60px;
+    display: block;
+    text-decoration: none;
+    color: #111111;
+}
+
+.widget-post .list-cate li {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    min-height: 0px;
+}
+
+.widget-post .list-cate li a {
+    padding-left:0px;
     display: block;
     text-decoration: none;
     color: #111111;
@@ -8866,6 +8899,17 @@ margin:5px;
     padding: 0px 5px 0px 5px;
     float: left;
     font-size: 12px;
+}
+
+.widget-post .thumb {
+    display: inline-block;
+    padding: 5px 10px 5px 5px;
+    float: left;
+    width: 100px;
+}
+.widget-post .thumb img {
+    width: 100%;
+    height: auto;
 }
 
 .widget .comments li {
@@ -13386,4 +13430,9 @@ img {
         background-size: auto 100%;
         background-attachment: scroll;
     }
+}
+
+#breadcrumbs span,
+#breadcrumbs a{
+    color:#fff;
 }

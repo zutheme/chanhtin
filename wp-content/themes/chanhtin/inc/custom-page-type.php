@@ -118,15 +118,40 @@ function prfx_field_meta_custom_field_page_contact( $post_id ){
      wp_nonce_field( basename( __FILE__ ), 'prfx_nonce' );
      $prfx_stored_meta = get_post_meta( $post_id ); ?>
 	 <div>
-		
-	<div>  
+		 <p><button type="button" onclick="showslide(this)">banner page</button></p>
+			  <table class="slide" style="display: none;">
+				  <tr width="100%">
+					  <td width="100%">
+						<p><label class="prfx-row-title"><?php _e( 'banner', 'prfx-textdomain' )?></label></p>
+						<p><input type="hidden" class="edit-image" name="banner_page" value="<?php if ( isset ( $prfx_stored_meta['banner_page'] ) ) echo $prfx_stored_meta['banner_page'][0]; ?>" /></p>
+						<p><img style="height: 100px;width: auto;" class="thumbnail" src="<?php if ( isset ( $prfx_stored_meta['banner_page'] ) ) echo $prfx_stored_meta['banner_page'][0]; ?>"></p>
+						<button type="button" class="images-menu-button">Upload</button>
+					   </td>
+					</tr>
+			</table>
+	 </div>
+	 <div>
+	 	<p><button type="button" onclick="showslide(this)">background</button></p>
+		  <table class="slide" style="display: none;">
+			  <tr width="100%">
+				  <td width="100%">
+					<p><label class="prfx-row-title"><?php _e( 'background', 'prfx-textdomain' )?></label></p>
+					<p><input type="hidden" class="edit-image" name="background_page" value="<?php if ( isset ( $prfx_stored_meta['background_page'] ) ) echo $prfx_stored_meta['background_page'][0]; ?>" /></p>
+					<p><img style="height: 100px;width: auto;" class="thumbnail" src="<?php if ( isset ( $prfx_stored_meta['background_page'] ) ) echo $prfx_stored_meta['background_page'][0]; ?>"></p>
+					<button type="button" class="images-menu-button">Upload</button>
+				   </td>
+				</tr>
+		</table>
+	</div>   
 <?php }
 
 function update_custom_field_page_contact($post_id){
 	 if( isset( $_POST['banner_page'])) {
          update_post_meta($post_id, 'banner_page', $_POST[ 'banner_page']);    
      }
-	
+	  if( isset( $_POST['background_page'])) {
+         update_post_meta($post_id, 'background_page', $_POST[ 'background_page']);    
+     }
 }
  
 function prfx_field_meta_custom_field_page_home( $post_id ){ 
