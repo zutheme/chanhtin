@@ -29,7 +29,7 @@ define( 'DB_USER', 'realestate_law' );
 define( 'DB_PASSWORD', 'KlLx9xfIRP' );
 
 /** MySQL hostname */
-define( 'DB_HOST', '45.117.168.156' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
