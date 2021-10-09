@@ -35,7 +35,7 @@
     <link href="<?php bloginfo('template_directory');?>/justica/css/owl.transitions.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/magnific-popup.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/jquery.countdown.css" rel="stylesheet" type="text/css">
-    <link href="<?php bloginfo('template_directory');?>/justica/css/style.css?v=0.3.5" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory');?>/justica/css/style.css?v=0.4.2" rel="stylesheet" type="text/css">
     <!-- color scheme -->
     <link id="colors" href="<?php bloginfo('template_directory');?>/justica/css/colors/scheme-01.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/coloring-logo.css?v=0.0.1" rel="stylesheet" type="text/css">
@@ -43,6 +43,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
+	 <!-- RS5.0 Stylesheet -->
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/justica/revolution/css/settings.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/justica/revolution/css/layers.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_directory');?>/justica/revolution/css/navigation.css" type="text/css">
+	<link href="<?php bloginfo('template_directory');?>/ladipage/css/style-form.css?v=0.0.1" rel="stylesheet" type="text/css">
 	<?php wp_head(); ?>
 </head>
 

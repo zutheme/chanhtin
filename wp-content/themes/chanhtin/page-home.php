@@ -12,7 +12,8 @@
  * @package eleaning
  */
 get_header(); ?>
-<?php get_template_part('layout/banner-section1'); ?>
+<?php //get_template_part('layout/banner-section1'); ?>
+<?php get_template_part('layout/slider-banner'); ?>
 <?php get_template_part('layout/topbar-makepoint'); ?>
 <?php get_template_part('layout/welcome'); ?>
 <?php get_template_part('layout/service-feature'); ?>
@@ -20,4 +21,5 @@ get_header(); ?>
 <?php get_template_part('layout/lawyer'); ?>
 <?php get_template_part('layout/testimonial'); ?>
 <?php get_template_part('layout/post-news'); ?>
+<?php get_template_part('layout/make-appoint'); ?>
 <?php get_footer(); ?>

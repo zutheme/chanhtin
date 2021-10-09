@@ -1,7 +1,8 @@
 <?php $idpost = get_the_ID();
     $prfx_stored_meta = get_post_meta( $idpost );  
 	$current_language = pll_current_language('slug');
-	$client = get_field('review_'.$current_language,'customizer'); 
+	$client = get_field('review_'.$current_language,'customizer');
+	
 ?>
 <section aria-label="section" class="text-light" data-bgimage="url(<?php echo $prfx_stored_meta['bg_testimonial'][0]; ?>) top" data-stellar-background-ratio=".2">
 	<div class="container">

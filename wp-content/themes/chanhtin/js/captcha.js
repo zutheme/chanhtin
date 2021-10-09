@@ -5,23 +5,23 @@ var onloadCallback = function() {
 	var _e_captcha_contact = document.getElementById("captcha_contact");
 	if(_e_captcha_contact){
 		grecaptcha.render('captcha_contact', {
-		  'sitekey' : '6LfXty8cAAAAAIzrAO3LRHmq_OIvOd-fGLsdVF3_',
+		  'sitekey' : '6LctkKccAAAAAPv8hGyZxycDH5ukTJLXQs-h_GKO',
 		  'callback' : render_contact,
 		  'theme' : 'light'
 		});
 	}
-	var _e_captcha_login = document.getElementById("captcha_login");
-	if(_e_captcha_login){
-		  grecaptcha.render('captcha_login', {
-		  'sitekey' : '6LfXty8cAAAAAIzrAO3LRHmq_OIvOd-fGLsdVF3_',
-		  'callback' : render_login,
+	var _e_captcha_popup = document.getElementById("captcha_popup");
+	if(_e_captcha_popup){
+		  grecaptcha.render('captcha_popup', {
+		  'sitekey' : '6LctkKccAAAAAPv8hGyZxycDH5ukTJLXQs-h_GKO',
+		  'callback' : render_popup,
 		  'theme' : 'light'
 		});
 	}
 	var _e_captcha_register = document.getElementById("captcha_register");
 	if(_e_captcha_register){
 		  grecaptcha.render('captcha_register', {
-		  'sitekey' : '6LfXty8cAAAAAIzrAO3LRHmq_OIvOd-fGLsdVF3_',
+		  'sitekey' : '6LctkKccAAAAAPv8hGyZxycDH5ukTJLXQs-h_GKO',
 		  'callback' : render_register,
 		  'theme' : 'light'
 		});

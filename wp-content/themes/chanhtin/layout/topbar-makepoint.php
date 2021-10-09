@@ -10,7 +10,7 @@ $idpost = get_the_ID();
 				<h3 class="no-bottom"><?php echo $prfx_stored_meta['home-point-title1'][0]; ?></h3>
 			</div>
 			<div class="col-md-4 text-lg-right rtl-lg-left text-sm-center">
-				<a href="#" class="btn-custom btn-black light"><?php pll_e('makeappoint'); ?></a>
+				<a href="javascript:void(0);" class="btn-custom btn-black light btn-popup"><?php pll_e('makeappoint'); ?></a>
 			</div>
 		</div>
 	</div>

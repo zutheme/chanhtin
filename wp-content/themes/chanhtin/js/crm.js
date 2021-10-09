@@ -117,6 +117,10 @@ function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+function render_popup(token){
+ 	var _e_captcha_popup = document.getElementById("captcha-popup");
+	_e_captcha_popup.value = token;
+}
 function render_contact(token){
  	var _e_captcha_contact = document.getElementById("captcha-contact");
 	_e_captcha_contact.value = token;
@@ -124,13 +128,13 @@ function render_contact(token){
 //register API
 var checkedValue = '';
 function regform_api(){
-  var _captcha_contact = document.getElementById("captcha-contact").value;
-  if(!_captcha_contact){
+  var frm = reachform(this);
+  if(!frm) return false;
+	var _captcha_contact = frm.getElementsByClassName('captcha-value')[0].value;
+	if(!_captcha_contact){
 		alert('Please check not robot');
 		return false;
 	}
-  var frm = reachform(this);
-  if(!frm) return false;
     var ename = frm.getElementsByTagName("input");
     var _lastname = '', _firstname = '', _phone = '', _email = '', _address = '', _spreadsheetid = '', _sex = 0, _date1 = '', _date2 = '';_subject = '';
     if(ename){
@@ -330,6 +334,7 @@ var countfind = 60;
 var exist_btn_popup = setInterval(function() {
   var e_btn_popup = document.getElementsByClassName('btn-popup');
       if(e_btn_popup) {
+		  console.log(e_btn_popup);
           //console.log(e_btn_popup);
            for (var i = 0; i < e_btn_popup.length; i++) {
             e_btn_popup[i].addEventListener("click",function(){
@@ -596,7 +601,7 @@ var exist_e_user_register_form = setInterval(function() {
     xhr.send(params);
 }
 /*user register*/
-var countfind = 60;
+/*var countfind = 60;
 var exist_e_language = setInterval(function() {
   var e_language = document.getElementsByClassName('language');
       if(e_language) {
@@ -612,4 +617,4 @@ var exist_e_language = setInterval(function() {
       }else{
         clearInterval(exist_e_language);
       }  
-   }, 100);
+   }, 100);*/

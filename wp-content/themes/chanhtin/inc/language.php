@@ -21,6 +21,7 @@ pll_register_string('post', 'client', 'post', true);
 pll_register_string('post', 'recentnews', 'post', true);
 pll_register_string('post', 'aboutus', 'post', true);
 pll_register_string('post', 'contactus', 'post', true);
+pll_register_string('post', 'anyquestion?', 'post', true);
 
 pll_register_string('post', 'document', 'post', true);
 pll_register_string('account', 'member', 'account', true);

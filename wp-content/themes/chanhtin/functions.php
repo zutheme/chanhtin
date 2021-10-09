@@ -213,6 +213,7 @@ require get_template_directory() . '/inc/lawyer-type.php';
 require get_template_directory() . '/inc/testimonial-type.php';
 require get_template_directory() . '/inc/custom-page-type.php';
 //require get_template_directory() . '/inc/mailattach.php';
+require get_template_directory() . '/inc/slider-type.php';
 require get_template_directory() . '/inc/custom_number_page.php';
 require get_template_directory() . '/inc/process.php';
 require get_template_directory() . '/inc/language.php';

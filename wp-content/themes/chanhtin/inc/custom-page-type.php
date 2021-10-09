@@ -433,6 +433,25 @@ function prfx_field_meta_custom_field_page_home( $post_id ){
 				</tr>
 		</table>
 	</div>
+	<div>
+	 <p><button type="button" onclick="showslide(this)">background contact</button></p>
+		  <table class="slide" style="display: none;">
+			   <tr width="100%">
+				  <td width="100%">
+					<p><label>title 1</label></p>
+					<p><input style="width:100%" type="text" name="bg_contact_title" value="<?php if ( isset ( $prfx_stored_meta['bg_contact_title'] ) ) echo $prfx_stored_meta['bg_contact_title'][0]; ?>" ></p>
+				   </td>
+			  </tr>
+			  <tr width="100%">
+				  <td width="100%">
+					<p><label class="prfx-row-title"><?php _e( 'background contact', 'prfx-textdomain' )?></label></p>
+					<p><input type="hidden" class="edit-image" name="bg_contact" value="<?php if ( isset ( $prfx_stored_meta['bg_contact'] ) ) echo $prfx_stored_meta['bg_contact'][0]; ?>" /></p>
+					<p><img style="height: 100px;width: auto;" class="thumbnail" src="<?php if ( isset ( $prfx_stored_meta['bg_contact'] ) ) echo $prfx_stored_meta['bg_contact'][0]; ?>"></p>
+					<button type="button" class="images-menu-button">Upload</button>
+				   </td>
+				</tr>
+		</table>
+	</div>
 <?php
 }
 
@@ -615,6 +634,9 @@ function update_custom_field_page_home($post_id){
      }
 	 if( isset( $_POST['bg_testimonial'])) {
          update_post_meta($post_id, 'bg_testimonial', $_POST[ 'bg_testimonial']);    
+     }
+	 if( isset( $_POST['bg_contact'])) {
+         update_post_meta($post_id, 'bg_contact', $_POST[ 'bg_contact']);    
      }
 	 
 }	

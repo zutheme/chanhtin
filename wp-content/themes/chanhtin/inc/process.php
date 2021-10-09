@@ -22,9 +22,9 @@ add_query_arg( array('email' => 'value1','idevent'=>'value2'),$ulr );
 
 function your_scripts() {
 
-  //wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/ajax.js', $deps=array(), $ver=true, true);
+  //wp_enqueue_script( 'script-name1', get_template_directory_uri() . '/js/ajax.js', $deps=array(), $ver=true, true);
 
-  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/crm.js', array(), '0.4.4', true );
+  wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/crm.js', array(), '0.5.0', true );
 
   wp_localize_script( 'script-name', 'MyAjax', array(
     'ajaxurl' => admin_url( 'admin-ajax.php' ),
@@ -34,7 +34,7 @@ function your_scripts() {
 
 }
 
-//add_action( 'wp_enqueue_scripts', 'your_scripts' );
+add_action( 'wp_enqueue_scripts', 'your_scripts' );
 
 
 
@@ -69,7 +69,7 @@ return apply_filters( 'wpb_get_ip', $ip );
 if(!function_exists('send_message')):
 	function send_message(){
 			 wp_verify_nonce( 'my-special-string', 'security' );
-			 $to="info@hibay.com.vn";
+			 $to="contact@chanhtin.vn";
 			 $input = json_decode(file_get_contents('php://input'),true);
 			 $ticket = $input['data'];
 			 $name = $ticket['name'];
@@ -84,7 +84,7 @@ if(!function_exists('send_message')):
 	             wp_die();
 			 }
 			 $data = array(
-				'secret' => "6LfXty8cAAAAAIJIUE8PnBfP4ctWodX_rP7Dobk_",
+				'secret' => "6LctkKccAAAAAD06jX_c0NtPVK-mm7p1pFupBrsH",
 				'response' => $captcha_contact
 			);        
 			$verify = curl_init();
@@ -214,7 +214,7 @@ if(!function_exists('userlogin')):
 	             wp_die();
 			 }
 			 $data = array(
-            'secret' => "6LfXty8cAAAAAIJIUE8PnBfP4ctWodX_rP7Dobk_",
+            'secret' => "6LctkKccAAAAAD06jX_c0NtPVK-mm7p1pFupBrsH",
             'response' => $captcha_login
 			);        
 			$verify = curl_init();
@@ -271,7 +271,7 @@ if(!function_exists('user_register')):
 	             wp_die();
 			 }
 			 $data = array(
-            'secret' => "6LfXty8cAAAAAIJIUE8PnBfP4ctWodX_rP7Dobk_",
+            'secret' => "6LctkKccAAAAAD06jX_c0NtPVK-mm7p1pFupBrsH",
             'response' => $captcha_register
 			);        
 			$verify = curl_init();

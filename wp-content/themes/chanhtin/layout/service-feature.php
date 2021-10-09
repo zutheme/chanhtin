@@ -23,7 +23,7 @@ $idpost = get_the_ID();
 				<div class="mask">
 					<div class="cover">
 						<div class="c-inner">
-							<h3><?php echo $str_icon; ?><span><?php echo $prfx_stored_meta['feature-service-title'.$j][0]; ?></span></h3>
+							<h3><?php //echo $str_icon; ?><span><?php echo $prfx_stored_meta['feature-service-title'.$j][0]; ?></span></h3>
 							<p><?php echo $prfx_stored_meta['feature-service-desc'.$j][0]; ?></p>
 							<div class="spacer20"></div>
 							<a href="<?php echo $prfx_stored_meta['feature-service-link'.$j][0]; ?>" class="btn-custom capsule"><?php pll_e('readmore'); ?></a>
