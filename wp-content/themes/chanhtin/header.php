@@ -26,9 +26,9 @@
         <![endif]-->
     <!-- CSS Files
     ================================================== -->
-    <link id="bootstrap" href="<?php bloginfo('template_directory');?>/justica/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link id="bootstrap-grid" href="<?php bloginfo('template_directory');?>/justica/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
-    <link id="bootstrap-reboot" href="<?php bloginfo('template_directory');?>/justica/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory');?>/justica/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory');?>/justica/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php bloginfo('template_directory');?>/justica/css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/animate.css" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/owl.carousel.css?v=0.0.1" rel="stylesheet" type="text/css">
     <link href="<?php bloginfo('template_directory');?>/justica/css/owl.theme.css" rel="stylesheet" type="text/css">

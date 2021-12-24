@@ -21,5 +21,5 @@ get_header(); ?>
 <?php get_template_part('layout/lawyer'); ?>
 <?php get_template_part('layout/testimonial'); ?>
 <?php get_template_part('layout/post-news'); ?>
-<?php get_template_part('layout/make-appoint'); ?>
+<?php get_template_part('layout/make-appoint-home'); ?>
 <?php get_footer(); ?>

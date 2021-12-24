@@ -142,12 +142,12 @@ function prfx_field_meta_slider_callback( $post ) {
     wp_nonce_field( basename( __FILE__ ), 'prfx_nonce' );
     $prfx_stored_meta = get_post_meta( $post->ID ); ?>
    <table class="slide">
-	  <tr width="100%">
+		 <tr width="100%">
 		  <td width="100%">
-			<p><label>Title</label></p>
+			<p><label>title 2</label></p>
 			<p><input style="width:100%" type="text" name="position" value="<?php if ( isset ( $prfx_stored_meta['position'] ) ) echo $prfx_stored_meta['position'][0]; ?>" ></p>
 		   </td>
-	  </tr>
+		</tr>
 	   <tr width="100%">
 		  <td width="100%">
 			<p><label>Liên kết</label></p>

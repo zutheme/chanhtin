@@ -12,7 +12,7 @@
  * @package eleaning
  */
 get_header(); ?>
-<?php $idpost = get_the_ID();
+<?php $idpost = get_queried_object_id();
     $prfx_stored_meta = get_post_meta( $idpost );  ?>
 <!--Page Title-->
  <!-- section begin -->
@@ -36,12 +36,12 @@ get_header(); ?>
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 p-lg-12  mb-sm-30 wow fadeInRight" data-wow-delay=".4s">
-                            <span class="p-title">Welcome</span><br>
-                            <h2>Justica is Your Best Partner for Legal Solutions</h2>
+                            <span class="p-title"><?php if ( isset ( $prfx_stored_meta['contact-title1'] ) ) echo $prfx_stored_meta['contact-title1'][0]; ?></span><br>
+                            <h2><?php if ( isset ( $prfx_stored_meta['contact-title2'] ) ) echo $prfx_stored_meta['contact-title2'][0]; ?></h2>
                         </div>
                         <div class="col-lg-6 wow fadeInRight" data-wow-delay=".6s">
                             <p>
-                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                                <?php if ( isset ( $prfx_stored_meta['contact-desc1'] ) ) echo $prfx_stored_meta['contact-desc1'][0]; ?>
                             </p>
                         </div>
                     </div>

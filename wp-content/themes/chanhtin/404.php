@@ -8,35 +8,46 @@
  */
 
 get_header();
+$current_language = pll_current_language('slug');
+$_banner_detail = get_field('banner_'.$current_language.'_detail','customizer');
+$banner_detail = $_banner_detail['url'];
 ?>
-  <!--Page Title-->
-    <section class="page-title centred" style="background-image: url(assets/images/background/page-title.jpg);">
-        <div class="auto-container">
-            <div class="content-box clearfix">
-                <h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hibay' ); ?></h1>
-                <!--<ul class="bread-crumb clearfix">
-                    <li><a href="index-1.html">Home</a></li>
-                    <li>404</li>
-                </ul>-->
+  <section id="subheader" class="text-white" data-stellar-background-ratio=".2" data-bgimage="url(<?php echo $banner_detail; ?>) top">
+                <div class="center-y relative text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1><?php the_title(); ?></h1>
+                    </div>
+                    <div class="col-md-12 text-center">
+                    <?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs" class="bread-crumb clearfix">','</p>' ); } ?>
+					</div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </div>
     </section>
     <!--End Page Title-->
-
-
-    <!-- error-section -->
-    <section class="error-section centred">
+<section aria-label="section">
         <div class="container">
-            <div class="content-box">
-                <h1>404</h1>
-                <h2><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hibay' ); ?></h2>
-                <div class="text">><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'hibay' ); ?></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="blog-read">
+						<h2>Trang không tìm thấy</h2>
+                    	<?php
+							get_search_form();
+							?>
+                    </div>
+                    <div class="spacer-single"></div>
+                    <?php //get_template_part('layout/comment'); ?> 
+                </div>
             </div>
         </div>
     </section>
+</section>
     <!-- error-section end -->
-	<?php
-	get_search_form();
-	?>
+	
 <?php
 get_footer();

@@ -12,8 +12,8 @@
           while ($team_query->have_posts()) {
             	$team_query->the_post();  
             	$id = get_the_ID();
-            	$title2 = get_post_meta( $id, 'position', true );
-				$link = get_post_meta( $id, 'position', true );
+				$title2 = get_post_meta( $id, 'position', true );
+				$link = get_post_meta( $id, 'link', true );
             	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($id), 'full', false );
             	if(!$thumbnail){
 				     $rand = rand(0,4);

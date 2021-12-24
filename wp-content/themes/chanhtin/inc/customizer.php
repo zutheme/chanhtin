@@ -624,12 +624,7 @@ if( function_exists('acf_add_local_field_group') ) {
 				'name'  		=> 'aboutus_en',
 				'type'  		=> 'textarea',
 			),
-			array (
-				'key'   		=> 'aboutus_arab',
-				'label' 		=> __( 'about us arab', 'htz' ),
-				'name'  		=> 'aboutus_arab',
-				'type'  		=> 'textarea',
-			),
+			
 			/*end aboutus*/
 		/*===============================================*/
 		),

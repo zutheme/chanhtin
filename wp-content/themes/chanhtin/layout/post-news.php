@@ -40,7 +40,7 @@
                         </div>
                         <div class="post-text">
                             <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?><span></span></a></h4>
-                            <p><?php echo get_the_excerpt_max(200); ?></p>
+                            <p><?php echo get_the_excerpt_max(190); ?></p>
                         </div>
                     </div>
                 </div>

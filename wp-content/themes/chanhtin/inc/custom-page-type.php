@@ -117,6 +117,29 @@ function update_custom_field_page_register($post_id){
 function prfx_field_meta_custom_field_page_contact( $post_id ){
      wp_nonce_field( basename( __FILE__ ), 'prfx_nonce' );
      $prfx_stored_meta = get_post_meta( $post_id ); ?>
+	<div>
+	 <p><button type="button" onclick="showslide(this)">title</button></p>
+		  <table class="slide" style="display: none;">
+				<tr width="100%">
+				  <td width="100%">
+					<p><label>title 1</label></p>
+					<p><input style="width:100%" type="text" name="contact-title1" value="<?php if ( isset ( $prfx_stored_meta['contact-title1'] ) ) echo $prfx_stored_meta['contact-title1'][0]; ?>" ></p>
+				   </td>
+			  </tr>
+			  <tr width="100%">
+				  <td width="100%">
+					<p><label>title 2</label></p>
+					<p><input style="width:100%" type="text" name="contact-title2" value="<?php if ( isset ( $prfx_stored_meta['contact-title2'] ) ) echo $prfx_stored_meta['contact-title2'][0]; ?>" ></p>
+				   </td>
+			  </tr>
+			  <tr width="100%">
+				  <td width="100%">
+					<p><label>gioi thieu</label></p>
+					<p><textarea style="width:100%" col="100" rows="4" name="contact-desc1"><?php if ( isset ( $prfx_stored_meta['contact-desc1'] ) ) echo $prfx_stored_meta['contact-desc1'][0]; ?></textarea></p>
+				   </td>
+			  </tr>
+		</table>
+	</div>
 	 <div>
 		 <p><button type="button" onclick="showslide(this)">banner page</button></p>
 			  <table class="slide" style="display: none;">
@@ -146,6 +169,15 @@ function prfx_field_meta_custom_field_page_contact( $post_id ){
 <?php }
 
 function update_custom_field_page_contact($post_id){
+	if( isset( $_POST['contact-title1'])) {
+         update_post_meta($post_id, 'contact-title1', $_POST[ 'contact-title1']);    
+     }
+	 if( isset( $_POST['contact-title2'])) {
+         update_post_meta($post_id, 'contact-title2', $_POST[ 'contact-title2']);    
+     }
+	  if( isset( $_POST['contact-desc1'])) {
+         update_post_meta($post_id, 'contact-desc1', $_POST[ 'contact-desc1']);    
+     }
 	 if( isset( $_POST['banner_page'])) {
          update_post_meta($post_id, 'banner_page', $_POST[ 'banner_page']);    
      }

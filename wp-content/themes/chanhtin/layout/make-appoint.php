@@ -1,10 +1,10 @@
-<?php $idpost = get_the_ID();
+<?php $idpost = get_queried_object_id();
     $prfx_stored_meta = get_post_meta( $idpost );
 	$current_language = pll_current_language('slug');
 	$client = get_field('review_'.$current_language,'customizer');
 ?>
-<!--<section aria-label="section" class="text-light" data-bgimage="url(<?php //echo $prfx_stored_meta['bg_contact'][0]; ?>) top" data-stellar-background-ratio=".2">-->
-<section aria-label="section" class="text-light" data-bgcolor="#ededed">
+<section aria-label="section" class="text-light" data-bgimage="url(<?php if ( isset ( $prfx_stored_meta['background_page'] ) ) echo $prfx_stored_meta['background_page'][0]; ?>) top" data-stellar-background-ratio=".2">
+<!--<section aria-label="section" class="text-light" data-bgcolor="#333">-->
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2 mb-sm-30 text-center">

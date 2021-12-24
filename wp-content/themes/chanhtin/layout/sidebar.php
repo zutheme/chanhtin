@@ -69,6 +69,11 @@
     <div class="small-border"></div>
     <?php echo $aboutus; ?>
 </div>
+<div class="widget widget-text">
+    <h4><?php pll_e('document'); ?></h4>
+    <div class="small-border"></div>
+    <?php get_template_part('layout/document-sidebar'); ?>
+</div>
 <div class="widget widget_tags">
     <h4><?php pll_e('populartags'); ?></h4>
     <div class="small-border"></div>
